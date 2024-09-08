@@ -56,6 +56,50 @@ func (s *Service) Convert(request model.Request) model.Response {
 			return model.Response{Result: request.Input / 100000}
 		}
 
+	case "kg":
+		switch request.UnitTo {
+		case "g":
+			return model.Response{Result: request.Input * 1000}
+		case "lb":
+			return model.Response{Result: request.Input * 2.205}
+
+		}
+
+	case "g":
+		switch request.UnitTo {
+		case "kg":
+			return model.Response{Result: request.Input / 1000}
+		case "lb":
+			return model.Response{Result: request.Input / 453.592}
+
+		}
+
+	case "lb":
+		switch request.UnitTo {
+		case "kg":
+			return model.Response{Result: request.Input / 2.205}
+		case "g":
+			return model.Response{Result: request.Input * 453.592}
+
+		}
+
+	case "C":
+		switch request.UnitTo {
+		case "F":
+			return model.Response{Result: request.Input*1.8 + 32}
+		}
+
+	case "F":
+		switch request.UnitTo {
+		case "C":
+			return model.Response{Result: (request.Input - 32) / 1.8}
+		}
+
+	case "K":
+		switch request.UnitTo {
+		case "C":
+			return model.Response{Result: request.Input - 273.15}
+		}
 	}
 
 	return model.Response{}
