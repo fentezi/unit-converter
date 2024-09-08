@@ -1,9 +1,9 @@
 package model
 
 type Request struct {
-	Input    string `json:"input"`
-	UnitForm string `json:"unitForm"`
-	UnitTo   string `json:"unitTo"`
+	Input    float64 `json:"input"`
+	UnitForm string  `json:"unitForm"`
+	UnitTo   string  `json:"unitTo"`
 }
 
 type Response struct {

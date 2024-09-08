@@ -4,6 +4,7 @@ import (
 	"log/slog"
 
 	"github.com/fentezi/unit-converter/handler"
+	"github.com/gin-gonic/gin"
 )
 
 type Router struct {
@@ -18,9 +19,14 @@ func NewRouter(log *slog.Logger, handler *handler.Handler) *Router {
 	}
 }
 
-func (r *Router) initRouter() {
+func (r *Router) initRouter() *gin.Engine {
+	g := gin.Default()
+
+	g.POST("/convert", r.handler.Convert)
+
+	return g
 }
 
 func (r *Router) StartServer() {
-	
+	r.initRouter().Run(":8080")
 }
