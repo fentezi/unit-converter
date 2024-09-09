@@ -84,6 +84,8 @@ Response Body
  - `ft` (Feet)
  - `mm` (Millimeters)
  - `cm` (Centimeters)
+ - `yd` (Yards)
+ - `mi` (Miles)
  
  **Weight**
  
