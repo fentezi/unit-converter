@@ -8,4 +8,5 @@ type Request struct {
 
 type Response struct {
 	Result float64 `json:"result"`
+	Unit   string  `json:"unit"`
 }

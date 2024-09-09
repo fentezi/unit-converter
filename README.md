@@ -26,7 +26,7 @@ https://roadmap.sh/projects/unit-converter
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/unit-conversion-api.git
+git clone https://github.com/fentezi/unit-conversion-api.git
 ```
 2. Change into the project directory: 
 ```bash
@@ -84,6 +84,8 @@ Response Body
  - `ft` (Feet)
  - `mm` (Millimeters)
  - `cm` (Centimeters)
+ - `yd` (Yards)
+ - `mi` (Miles)
  
  **Weight**
  
